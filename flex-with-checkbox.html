@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .sort-list {
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        /* Символы ~ и + в селекторах используются к ниже стоящим элементам (если вложить его в div, то тильда его не найдёт, ПОТОМУ ЧТО НЕ НА ОДНОМ УРОВНЕ А ВЛОЖЕННО),
+        находящимся на том же уровне вложенности
+        Отличие в том, что 
+        + ищет только напрямую нижестоящий, а
+        ~ вниз вне зависимости от количества элементов */
+        .input-sort:checked~.sort-list {
+            flex-direction: column-reverse;
+        }
+
+        .input-sort {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <label for="sort">ЖМИ НА МЕНЯ</label>
+    <input type="checkbox" class="input-sort" id="sort">
+    <div></div>
+    <ol class="sort-list">
+        <li><a href="">Timofey</a></li>
+        <li><a href="">Anna</a></li>
+        <li><a href="">Gleb</a></li>
+        <li><a href="">Kirill</a></li>
+        <li><a href="">Robert</a></li>
+        <li><a href="">Andrey</a></li>
+    </ol>
+</body>
+
+</html>

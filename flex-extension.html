@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .lights {
+        display: flex;
+        /* flex-direction: row;
+        justify-content: center;
+        align-items: center; */
+        flex-wrap: wrap;
+        width: 450px;
+        height: 350px;
+        border: 2px solid black;
+    }
+
+    .color {
+        flex-basis: 120px;
+        /* по умолч. - 1, т.е. флекс-элементы будут ужиматься в флекс-контейнере
+        при знач. 0 - этого происходить не будет */
+        flex-shrink: 0;
+        min-width: 50px;
+        min-height: 50px;
+        margin: 10px;
+    }
+
+    .red {
+        /* width: 100px;
+        height: 150px; */
+        /* flex-basis переопределяет по главной оси ширину (row), по поперечной высоту (column)
+        Устанавливает размер флекс-элемента вдоль главной оси
+        */
+        /* flex-basis: 100%; */
+
+        /* по умолч. 0, т.е. флекс-элемент не растягивается
+        1 - флекс-элемент растягивается
+        flex-grow можно использовать как распределение веса между
+        флекс-элементами в ряду, т.е. свободное пространство будет выделяться на 
+        флекс-элемент если его значение больше чем у других флекс-элементов 
+        в этом ряду
+        */
+        /* flex-grow: 1; */
+        flex-grow: 1;
+        background-color: red;
+    }
+
+    /* margin съедает всё  свободное пространство, нельзя добавить новые элементы*/
+    /* align-self даёт возможность добавлять новые элементы */
+    .yellow {
+        background-color: yellow;
+        flex-grow: 2;
+        /* margin-top: auto; */
+
+    }
+
+    .green {
+        background-color: green;
+        /* margin-bottom: auto; */
+    }
+
+    .blue {
+        /* Сокращённое свойство flex
+        flex: flex-grow flex-shrink flex-basis
+        */
+        background-color: blue;
+        flex: 1 1 100%;
+    }
+</style>
+
+<body>
+    <div class="lights">
+        <div class="color red"></div>
+        <div class="color yellow"></div>
+        <div class="color green"></div>
+        <div class="color blue"></div>
+    </div>
+</body>
+
+</html>

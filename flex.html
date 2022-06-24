@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .lights{
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            flex-wrap: wrap-reverse;
+            justify-content: center;
+            /* включает перенос флекс элементов внутри флекс-контейнера
+            при нехватке места */
+            /* flex-wrap: wrap; */
+            /*позволяет выравнять РЯДЫ вдоль поперечной оси. 
+            работает только для двух и более рядов, при использовании свойства
+            flex-wrap: wrap; */
+            /* align-content: center; */
+            width: 450px;
+            height: 550px;
+            border: 2px solid black;
+        }
+
+        .color {
+            min-width: 80px;
+            min-height: 80px;
+            width: 120px;
+            margin: 5px;
+        }
+
+        .red {
+            background-color: red;
+            /* order - значение по умолч. - 0. отвечает за порядок флекс-элементов */
+            /* order: -2; */
+            order: -3;
+        }
+        .yellow {
+            background-color: yellow;
+        }
+        .green {
+            background-color: green;
+            order: -2;
+        }
+        .blue {
+            background-color: blue;
+        }
+        .violet {
+            background-color: violet;
+        }
+        .coral {
+            background-color: coral;
+            order: -1;
+        }
+        .aqua {           
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <!-- .lights - create div with class -->
+    <div class="lights">
+        <div class="color red"></div>
+        <div class="color yellow"></div>
+        <div class="color green"></div>
+        <div class="color blue"></div>
+        <div class="color violet"></div>
+        <div class="color coral"></div>
+        <div class="color aqua"></div>
+    </div>
+</body>
+</html>
